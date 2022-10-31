@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta charset="utf-8">
+        <title>Quizzz</title>
+    </head>
+    <body>
+        <header>
+            <div class="nav-container">
+                <nav class="header-nav">
+                    <img src="./img/logo.svg" class="nav-item logo">
+                    <a href="#" class="nav-item create-test">Создать тест</a>
+                    <a href="#" class="nav-item info">Как это работает?</a>
+                    <a href="#" class="nav-item contacts">Контакты</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>
+                <span class="green">Обучение</span><span class="white"> - то ещё </span><span class="green pencil-underlined">развлечение</span>
+            </h1>
+            <div class="game-choice-container">
+                <div hidden class="arrow"></div>
+                <button class="side-button button-left" >
+                    <div class="arrow arrow-left"></div>
+                </button>
+                <article class="game-description">
+                    <div class="card-left">
+                        <h2 class="game-name">Quizzz</h2>
+                        <div class="p-wrapper">
+                            <p>
+                                Это игра, участникам которой предстоит пройти тест. Каждый вопрос имеет ограничение по времени, поэтому чем быстрее будет дан ответ, тем больше баллов можно будет заработать. Вы можете создать такой тест прямо сейчас, просто нажав на кнопку ниже.
+                            </p>
+                        </div>
+                        <button class="create-game-button" type="button">Создать Quizzz</button>
+                    </div>
+                    <img src="./img/phone-pic-1.png" width="315px" height="633px" class="phone-pic">
+                </article>
+                <div class="side-button button-right">
+                    <div class="arrow arrow-right"></div>
+                </div>
+            </div>
+            <div class="circles">
+                <div class="circle circle-current"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </main>
+    </body>
+</html>
