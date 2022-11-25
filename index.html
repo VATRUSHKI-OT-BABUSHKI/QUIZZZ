@@ -37,7 +37,7 @@
                                     Это игра, участникам которой предстоит пройти тест. Каждый вопрос имеет ограничение по времени, поэтому чем быстрее будет дан ответ, тем больше баллов можно будет заработать. Вы можете создать такой тест прямо сейчас, просто нажав на кнопку ниже.
                                 </p>
                             </div>
-                            <button class="create-game-button" type="button">Создать Quizzz</button>
+                            <button id="create-quiz" class="create-game-button" type="button">Создать Quizzz</button>
                         </div>
                         <img src="./img/phone-pic-1.png" width="315px" height="633px" class="phone-pic">
                     </article>
@@ -51,6 +51,71 @@
                     <div class="circle"></div>
                 </div>
             </div>
+            
+            <div class="quiz-constructor-container hidden">
+                <div class="phone-preview">
+                    <div class="question-text">
+                        В каком году родился Иван Грозный?
+                    </div>
+                    <div class="answers">
+                        <div class="answer">
+                            1530
+                        </div>
+                        <div class="answer">
+                            1529
+                        </div>
+                        <div class="answer">
+                            1528
+                        </div>
+                        <div class="answer">
+                            1527
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="construction-menu">
+                    <input type="text" name="new-question-text" id="q-text" class="new-question-text" placeholder="Введите текст вопроса...">
+                    <div class="add-answers">
+                        <div class="new-answer">
+                            <input type="text" name="answer-text" class="new-answer-text" placeholder="Введите ответ...">
+                            <label class="radio-correct-label">
+                                <input type="radio" name="correct-question" checked>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="new-answer">
+                            <input type="text" name="answer-text" class="new-answer-text" placeholder="Введите ответ...">
+                            <label class="radio-correct-label">
+                                <input type="radio" name="correct-question">
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="new-answer">
+                            <input type="text" name="answer-text" class="new-answer-text" placeholder="Введите ответ...">
+                            <label class="radio-correct-label">
+                                <input type="radio" name="correct-question">
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="new-answer">
+                            <input type="text" name="answer-text" class="new-answer-text" placeholder="Введите ответ...">
+                            <label class="radio-correct-label">
+                                <input type="radio" name="correct-question">
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="button-delete">
+                            Удалить
+                        </button>
+                        <button class="button-save">
+                            Сохранить
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <div class="how-it-works-container">
                 <div class="how-it-works">
                     <h2 class="part-two-header">Как это работает?</h2>
@@ -109,4 +174,5 @@
             </div>
         </main>
     </body>
+    <script src="./js/main.js" type="module"></script>
 </html>
