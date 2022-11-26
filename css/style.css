@@ -78,7 +78,7 @@ a:active {
     color: #e6e6e6;
 }
 
-/*Блок "создать тест"*/
+/*Блок представления*/
 h1 {
     margin-top: 0px;
     margin-bottom: 136px;
@@ -269,6 +269,7 @@ h2 {
 .quiz-constructor-container{
     background-color: #999DFF;
     display: flex;
+    justify-content: end;
 }
 
 .phone-preview{
@@ -285,6 +286,13 @@ h2 {
     display: grid;
     grid-template-rows: 3fr 2fr;
     justify-content: start;
+}
+
+/*Прячет телефон, когда нет места для телефона и редактора*/
+@media (max-width: 1000px) {
+    .phone-preview{
+        display: none;
+    }
 }
 
 .question-text{
@@ -320,10 +328,11 @@ h2 {
 .construction-menu{
     background-color: #FFFFFF;
     width: 433px;
+    height: 1009px;
     padding-top: 156px;
     padding-left: 61px;
     padding-right: 60px;
-    padding-bottom: 341.19px;
+    
 }
 
 input[type='text']{
@@ -354,10 +363,6 @@ input[type='text']::placeholder{
 .new-answer-text{
     width: 346px;
     height: 61.81px;
-}
-
-.new-answer:last-child{
-    margin-bottom: 0;
 }
 
 .add-answers{
