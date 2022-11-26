@@ -17,6 +17,9 @@
                     <a href="#" class="nav-item info">Как это работает?</a>
                     <a href="#" class="nav-item contacts">Контакты</a>
                 </nav>
+                <button class="connection-code hidden">
+                    Код присоединения
+                </button>
             </div>
         </header>
         <main>
@@ -54,24 +57,33 @@
             </div>
             <!--Конструктор quiz. Переключение между ним и стартовой страницей с помощью класса hidden-->
             <div class="quiz-constructor-container hidden">
-                <div class="phone-preview">
-                    <div class="question-text">
-                        В каком году родился Иван Грозный?
+                <div class="phone-wrapper">
+                    <div class="phone-preview">
+                        <div class="question-text">
+                            В каком году родился Иван Грозный?
+                        </div>
+                        <div class="answers">
+                            <div class="answer">
+                                1530
+                            </div>
+                            <div class="answer">
+                                1529
+                            </div>
+                            <div class="answer">
+                                1528
+                            </div>
+                            <div class="answer">
+                                1527
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="answers">
-                        <div class="answer">
-                            1530
-                        </div>
-                        <div class="answer">
-                            1529
-                        </div>
-                        <div class="answer">
-                            1528
-                        </div>
-                        <div class="answer">
-                            1527
-                        </div>
-                        
+                    <div class="flipper">
+                        <button class="flip-arrow flip-left"></button>
+                        <output name="current-question" class="current-question">
+                            1/10
+                        </output>
+                        <button class="flip-arrow flip-right"></button>
                     </div>
                 </div>
                 <div class="construction-menu">

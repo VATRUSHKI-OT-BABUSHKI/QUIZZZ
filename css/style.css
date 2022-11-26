@@ -78,6 +78,18 @@ a:active {
     color: #e6e6e6;
 }
 
+.connection-code{
+    width: 263px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
 /*Блок представления*/
 h1 {
     margin-top: 0px;
@@ -272,6 +284,21 @@ h2 {
     justify-content: end;
 }
 
+.phone-wrapper{
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Прячет телефон, когда нет места для телефона и редактора*/
+@media (max-width: 885px) {
+    .phone-wrapper{
+        display: none;
+    }
+}
+
 .phone-preview{
     width: 266.04px;
     height: 580.94px;
@@ -280,19 +307,10 @@ h2 {
     padding-right: 113.61px;
     padding-bottom: 118.72px;
     background-image: url('../img/question-preview-phone.png');
-    margin-right: auto;
-    margin-left: auto;
     margin-top: 46px;
     display: grid;
     grid-template-rows: 3fr 2fr;
     justify-content: start;
-}
-
-/*Прячет телефон, когда нет места для телефона и редактора*/
-@media (max-width: 1000px) {
-    .phone-preview{
-        display: none;
-    }
 }
 
 .question-text{
@@ -316,13 +334,46 @@ h2 {
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     width: 266.04px;
-    height: 47.12px;
+    padding-top: 12.56px;
+    padding-bottom: 12.56px;
     background-color: #6F58FB;
     border-radius: 18px;
+}
+
+.flipper{
+    width: 182px;
+    height: 41px;
+    background: rgba(217, 217, 217, 0.4);
+    border-radius: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flip-arrow{
+    width: 15px;
+    height: 27px;
+    background-color: transparent;
+    background-image: url('../img/flipper-arrow.svg');
+    border: none;
+    background-repeat: no-repeat;
+    margin: 0 11px;
+}
+
+.flip-arrow:active{
+    background-image: url('../img/flipper-arrow-active.svg');
+}
+
+.flip-right{
+    transform: rotate(180deg);
+}
+
+.current-question{
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 
 .construction-menu{
