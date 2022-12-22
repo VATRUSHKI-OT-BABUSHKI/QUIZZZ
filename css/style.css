@@ -198,7 +198,7 @@ h2 {
 
 .create-game-button:active {
     outline: none;
-    box-shadow: 0 0 0 4px #c1b8fc;
+    box-shadow: 0 3px 4px 1px #c0c0c0;
 }
 
 .side-button {
@@ -360,14 +360,21 @@ h2 {
     border: none;
     background-repeat: no-repeat;
     margin: 0 11px;
+    padding: 9px 0px;
+    cursor: pointer;
 }
 
 .flip-arrow:active{
     opacity: 0.7;
 }
 
+.flip-left{
+    padding-right: 30px;
+}
+
 .flip-right{
     transform: rotate(180deg);
+    padding-left: 30px;
 }
 
 .current-question{
@@ -465,6 +472,15 @@ input[type='text']::placeholder{
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    opacity: 0.9;
+}
+
+.buttons button:active{
+    box-shadow: 0 3px 4px 1px #c0c0c0;;
 }
 
 .button-delete{
