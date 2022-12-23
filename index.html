@@ -59,34 +59,34 @@
             <div class="quiz-constructor-container hidden">
                 <div class="phone-wrapper">
                     <div class="phone-preview">
-                        <div class="question-text">
+                        <output class="question-text" name="question-text" form="question-form">
                             В каком году родился Иван Грозный?
-                        </div>
+                        </output>
                         <div class="answers">
-                            <div class="answer">
+                            <output class="answer" id="answer-output-1" form="question-form">
                                 1530
-                            </div>
-                            <div class="answer">
+                            </output>
+                            <output class="answer" id="answer-output-2" form="question-form">
                                 1529
-                            </div>
-                            <div class="answer">
+                            </output>
+                            <output class="answer" id="answer-output-3" form="question-form">
                                 1528
-                            </div>
-                            <div class="answer">
+                            </output>
+                            <output class="answer" id="answer-output-4" form="question-form">
                                 1527
-                            </div>
+                            </output>
                             
                         </div>
                     </div>
                     <div class="flipper">
                         <button class="flip-arrow flip-left"></button>
-                        <output name="current-question" class="current-question">
-                            1/10
-                        </output>
+                        <div>
+                            <span class="current-question">1</span>/<span class="question-count">1</span>
+                        </div>
                         <button class="flip-arrow flip-right"></button>
                     </div>
                 </div>
-                <div class="construction-menu">
+                <form class="construction-menu" id="question-form" autocomplete="off">
                     <input type="text" name="new-question-text" id="q-text" class="new-question-text" placeholder="Введите текст вопроса...">
                     <div class="add-answers">
                         <div class="new-answer">
@@ -119,14 +119,14 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <button class="button-delete">
+                        <button class="button-delete" disabled>
                             Удалить
                         </button>
                         <button class="button-save">
                             Сохранить
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
             <!--Второй лист стартовой страницы-->
             <div class="how-it-works-container">

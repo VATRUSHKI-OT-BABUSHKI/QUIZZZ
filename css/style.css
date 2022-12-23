@@ -318,9 +318,11 @@ h2 {
     font-size: 18px;
     line-height: 22px;
     text-align: center;
+    width: 266px;
     max-height: 346px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .answers{
@@ -336,6 +338,7 @@ h2 {
     color: #FFFFFF;
     text-align: center;
     width: 266.04px;
+    min-height: 22px;
     padding-top: 12.56px;
     padding-bottom: 12.56px;
     background-color: #6F58FB;
@@ -350,6 +353,14 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.flipper span{
+    padding: 0;
+    margin: 0;
 }
 
 .flip-arrow{
@@ -378,9 +389,8 @@ h2 {
 }
 
 .current-question{
-    font-size: 20px;
-    line-height: 24px;
-    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
 }
 
 .construction-menu{
@@ -486,6 +496,22 @@ input[type='text']::placeholder{
 .button-delete{
     background: #FB5858;
     margin-right: 36.94px;
+}
+
+.button-delete:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.button-delete:disabled:hover {
+    background: #FB5858;
+    opacity: 0.5;
+    box-shadow: 0 5px 4px 1px #c0c0c0;
+}
+
+.button-delete:disabled:active {
+    background: #FB5858;
+    box-shadow: 0 5px 4px 1px #c0c0c0;
 }
 
 .button-save{
