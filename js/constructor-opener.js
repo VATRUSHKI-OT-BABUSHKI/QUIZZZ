@@ -27,3 +27,5 @@ createGameButton.addEventListener('click', openQuizConstructor);
 createTestButton.addEventListener('click', openQuizConstructor);
 
 mainLogo.addEventListener('click', closeQuizConstructor);
+
+export {quizConstructor};
