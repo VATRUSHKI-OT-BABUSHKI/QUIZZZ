@@ -1,5 +1,6 @@
 const presentation = document.body.querySelector('.choosing-game');
 const navContainer = document.querySelector('.nav-container');
+const mainLogo = document.querySelector('.main-logo');
 const createTestButton = document.querySelector('.create-test');
 const createGameButton = presentation.querySelector('.create-game-button');
 const quizConstructor = document.body.querySelector('.quiz-constructor-container');
@@ -23,4 +24,6 @@ const closeQuizConstructor = (evt) => {
 
 createGameButton.addEventListener('click', openQuizConstructor);
 
-createTestButton.addEventListener('click', closeQuizConstructor);
+createTestButton.addEventListener('click', openQuizConstructor);
+
+mainLogo.addEventListener('click', closeQuizConstructor);

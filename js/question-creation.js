@@ -17,8 +17,25 @@ const buttonSave = constructionMenu.querySelector('.button-save');
 
 const flipper = document.querySelector('.flipper');
 
+let values = [];
+
+const isActiveButton = (values) => {	
+	buttonSave.disabled = (!values.every((element) => element != '')) ? true : false;
+	console.log(values);
+}
+
+const checkSaveButtonStatus = () => {
+	values = [];
+	for (let item of answerInputs){
+		values.push(item.value)
+	}
+	values.push(newQuestionText.value)
+	isActiveButton(values);
+}
+
 const questionInputHandler = () => {
   questionTextOutput.value = newQuestionText.value;
+  checkSaveButtonStatus();
 };
 
 const answersInputHandler = (evt) => {
@@ -27,6 +44,7 @@ const answersInputHandler = (evt) => {
     return;
   }
   answerOutputs[Array.from(answerInputs).indexOf(target)].value = target.value
+  checkSaveButtonStatus();	
 }
 
 const updatePreview = (question) => {
@@ -86,6 +104,7 @@ const saveQuestion = () => {
 const saveButtonHandler = (evt) => {
   evt.preventDefault();
   saveQuestion();
+  buttonSave.disabled = true;
   if (currentQuestion.textContent === questionCount.textContent) {
     increaseQuestionCount();
     increaseCurrentQuestion();
@@ -138,6 +157,7 @@ const deleteButtonHandler = (evt) => {
   //decreaseCurrentQuestion();
   decreaseQuestionCount();
   checkNeedForDeletions();
+  buttonSave.disabled = true;
   if (currentQuestion.textContent === questionCount.textContent) {
     constructionMenu.reset();
     return;
@@ -147,6 +167,7 @@ const deleteButtonHandler = (evt) => {
   console.log(questions);
 };
 
+buttonSave.disabled = true;
 newQuestionText.addEventListener('input', questionInputHandler);
 addAnswersBlock.addEventListener('input', answersInputHandler);
 buttonSave.addEventListener('click', saveButtonHandler);

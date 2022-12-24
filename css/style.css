@@ -18,13 +18,14 @@ main{
 Для изображения - фона, начинающегося с определённого места
 
 body:after {
+	height: 794px;
     content:"";
     position:absolute;
-    top:249px;
+    top: 249px;
     left:0;
     right:0;
     bottom:0;
-    background-image: url(../img/start-page-background.svg);
+    background-image: url('../img/start-page-background.svg');
     background-repeat: repeat;
     z-index: -1;
 }
@@ -111,7 +112,7 @@ h1 {
 .pencil-underlined {
     padding: 40px;
     padding-left: 0px;
-    background-image: url(../img/underline.png);
+    background-image: url('../img/underline.png');
     background-position: center top;
 }
 
@@ -498,7 +499,7 @@ input[type='text']::placeholder{
     margin-right: 36.94px;
 }
 
-.button-delete:disabled {
+.button-delete:disabled, .button-save:disabled {
     opacity: 0.5;
     cursor: default;
 }
@@ -516,6 +517,12 @@ input[type='text']::placeholder{
 
 .button-save{
     background: #6F58FB;
+}
+
+.button-save:disabled:hover {
+	opacity: 0.5;
+	background: #6F58FB;
+	box-shadow: 0 5px 4px 1px #c0c0c0;
 }
 
 /*Блок "как это работает"*/
