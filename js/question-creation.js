@@ -167,9 +167,19 @@ const deleteButtonHandler = (evt) => {
   console.log(questions);
 };
 
+const radiosChangeHandler = (evt) => {
+  const target = evt.target;
+  if (!target.type === 'RADIO') {
+    return;
+  }
+  checkSaveButtonStatus();
+}
+
 buttonSave.disabled = true;
 newQuestionText.addEventListener('input', questionInputHandler);
 addAnswersBlock.addEventListener('input', answersInputHandler);
 buttonSave.addEventListener('click', saveButtonHandler);
 flipper.addEventListener('click', flipperClickHandler);
 buttonDelete.addEventListener('click', deleteButtonHandler);
+
+addAnswersBlock.addEventListener('click', radiosChangeHandler);
