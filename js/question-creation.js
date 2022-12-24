@@ -24,7 +24,7 @@ const isActiveButton = (values) => {
 	console.log(values);
 }
 
-const checkButtonStatus = () => {
+const checkSaveButtonStatus = () => {
 	values = [];
 	for (let item of answerInputs){
 		values.push(item.value)
@@ -35,7 +35,7 @@ const checkButtonStatus = () => {
 
 const questionInputHandler = () => {
   questionTextOutput.value = newQuestionText.value;
-  checkButtonStatus();
+  checkSaveButtonStatus();
 };
 
 const answersInputHandler = (evt) => {
@@ -44,7 +44,7 @@ const answersInputHandler = (evt) => {
     return;
   }
   answerOutputs[Array.from(answerInputs).indexOf(target)].value = target.value
-  checkButtonStatus();	
+  checkSaveButtonStatus();	
 }
 
 const updatePreview = (question) => {
