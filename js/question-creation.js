@@ -15,7 +15,7 @@ const answerOutputs = phonePreview.querySelectorAll('.answer');
 const buttonDelete = constructionMenu.querySelector('.button-delete');
 const buttonSave = constructionMenu.querySelector('.button-save');
 
-const flipper = document.querySelector('.flipper');
+const flipper = document.querySelector('.creation-flipper');
 
 let values = [];
 
