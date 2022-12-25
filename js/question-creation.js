@@ -1,3 +1,6 @@
+import { quizConstructor } from "./constructor-opener.js";
+import { openPreviewBlock } from "./quiz-preview.js";
+
 //Версия, в которой формируется массив, содержащий все вопросы.
 const constructionMenu = document.querySelector('.construction-menu');
 const newQuestionText = constructionMenu.querySelector('.new-question-text');
@@ -17,11 +20,27 @@ const buttonSave = constructionMenu.querySelector('.button-save');
 
 const flipper = document.querySelector('.creation-flipper');
 
+const fullPreviewButton = quizConstructor.querySelector('.full-preview-button');
+
+fullPreviewButton.setAttribute('disabled', 'disabled');
+
+const blockPreviewButtonIfNeeded = () => {
+	if ((questions.length === 0) !== fullPreviewButton.hasAttribute('disabled')) {
+		fullPreviewButton.toggleAttribute('disabled');
+	}
+};
+
+const fullPreviewButtonClickHandler = (evt) => {
+	evt.preventDefault();
+	openPreviewBlock();
+};
+
+fullPreviewButton.addEventListener('click', fullPreviewButtonClickHandler);
+
 let values = [];
 
 const isActiveButton = (values) => {	
 	buttonSave.disabled = (!values.every((element) => element != '')) ? true : false;
-	console.log(values);
 }
 
 const checkSaveButtonStatus = () => {
@@ -98,6 +117,7 @@ const saveQuestion = () => {
     correct: correct
   }
   questions[parseInt(currentQuestion.textContent) - 1] = question;
+  blockPreviewButtonIfNeeded();
   console.log(questions);
 }
 
@@ -158,13 +178,14 @@ const deleteButtonHandler = (evt) => {
   decreaseQuestionCount();
   checkNeedForDeletions();
   buttonSave.disabled = true;
+  blockPreviewButtonIfNeeded();
+  console.log(questions);
   if (currentQuestion.textContent === questionCount.textContent) {
-    constructionMenu.reset();
+    constructionMenu.reset();	
     return;
   }
   loadQuestionToForm(questions[parseInt(currentQuestion.textContent) - 1]);
   checkNeedForDeletions();
-  console.log(questions);
 };
 
 const radiosChangeHandler = (evt) => {
@@ -183,3 +204,5 @@ flipper.addEventListener('click', flipperClickHandler);
 buttonDelete.addEventListener('click', deleteButtonHandler);
 
 addAnswersBlock.addEventListener('click', radiosChangeHandler);
+
+export {questions};
