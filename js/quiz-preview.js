@@ -16,6 +16,10 @@ const answerButtonsWrapper = fullQuizPreview.querySelector('.preview-questions-w
 let currentQuestion = 0;
 
 const openPreviewBlock = () => {
+  currentQuestion = 0;
+  currentQuestionOutput.textContent = currentQuestion + 1;
+  resetButtonColors();
+  changeAnswerButtons(false);
   quizConstructor.classList.add('hidden');
   fullQuizPreview.classList.remove('hidden');
   loadQuestionToPreview(questions[currentQuestion]);

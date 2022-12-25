@@ -503,30 +503,22 @@ input[type='text']::placeholder{
     margin-right: 36.94px;
 }
 
-.button-delete:disabled, .button-save:disabled {
-    opacity: 0.5;
-    cursor: default;
-}
-
-.button-delete:disabled:hover {
-    background: #FB5858;
-    opacity: 0.5;
-    box-shadow: 0 5px 4px 1px #c0c0c0;
-}
-
-.button-delete:disabled:active {
-    background: #FB5858;
-    box-shadow: 0 5px 4px 1px #c0c0c0;
-}
-
 .button-save{
     background: #6F58FB;
 }
 
-.button-save:disabled:hover {
-	opacity: 0.5;
-	background: #6F58FB;
-	box-shadow: 0 5px 4px 1px #c0c0c0;
+.buttons button:disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+
+.buttons button:disabled:hover {
+    opacity: 0.5;
+    box-shadow: 0 5px 4px 1px #c0c0c0;
+}
+
+.buttons button:disabled:active {
+    box-shadow: 0 5px 4px 1px #c0c0c0;
 }
 
 .buttons .full-preview-button{

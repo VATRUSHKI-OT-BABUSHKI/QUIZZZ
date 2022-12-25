@@ -5,9 +5,13 @@ const createTestButton = document.querySelector('.create-test');
 const createGameButton = presentation.querySelector('.create-game-button');
 const quizConstructor = document.body.querySelector('.quiz-constructor-container');
 const connectionCode = document.querySelector('.connection-code');
+const fullQuizPreview = document.querySelector('.full-quiz-preview');
 
 const openQuizConstructor = (evt) => {
   evt.preventDefault();
+  if (!fullQuizPreview.classList.contains('hidden')) {
+    fullQuizPreview.classList.add('hidden');
+  }
   presentation.classList.add('hidden');
   quizConstructor.classList.remove('hidden');
   navContainer.classList.add('constructor-open');
@@ -20,6 +24,9 @@ const closeQuizConstructor = (evt) => {
   quizConstructor.classList.add('hidden');
   navContainer.classList.remove('constructor-open');
   connectionCode.classList.add('hidden');
+  if (!fullQuizPreview.classList.contains('hidden')) {
+    fullQuizPreview.classList.add('hidden');
+  }
 };
 
 createGameButton.addEventListener('click', openQuizConstructor);
