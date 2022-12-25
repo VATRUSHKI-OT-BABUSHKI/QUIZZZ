@@ -666,7 +666,9 @@ input[type='text']::placeholder{
     line-height: 34px;
     min-height: 192px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     color: #FFFFFF;
 }
 
