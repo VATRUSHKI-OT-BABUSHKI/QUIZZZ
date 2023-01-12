@@ -1,0 +1,108 @@
+@import "../styles/constants.scss";
+
+.radioBox {
+    font-family: Roboto;
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    width: 400px;
+    box-shadow: $shadow_main;
+    background-color: white;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    .radioBox__text {
+        margin-left: 14px;
+    }
+}
+
+.radio {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    .radio__outer {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+
+        
+
+        width: 16px;
+        height: 16px;
+        border: 2px solid $gray2;
+        border-radius: 50%;  
+        &_checked {
+            border-color: turquoise;
+        }      
+        .radio__dot {
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            background-color: $turquoise_bright;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+    }
+
+    &:hover {
+        .radio__outer {
+            border-color: $turquoise_bright;
+        }
+    }
+    
+    &_disabled {
+        opacity: 0.45;
+        .radio__outer {
+            border: 2px solid $gray2 !important;
+            .radio__dot {
+                background-color: $gray2 !important;
+            }
+        }
+    }
+}
+
+.button {
+    display: inline-flex;
+    background-color: $ligth_green;
+    text-transform: uppercase;
+    color: $dark_green;
+    font-family: Roboto;
+    padding: 12px 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px; 
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: $turquoise;
+        color: white;
+    }
+
+    &:active {
+        background-color: $dark_green;
+    }
+
+    &_disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        background-color: $ligth_green !important;
+        color: $dark_green !important;
+    }
+}
+
+.main {
+    font-family: Lora;
+    padding: 20px;
+    h2 {
+        margin-top: 50px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    p {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
