@@ -178,6 +178,7 @@ h2 {
 .phone-pic {
     position: relative;
     bottom: 136px;
+    right: 49px;
 }
 
 .create-game-button {
@@ -694,4 +695,97 @@ input[type='text']::placeholder{
 
 .full-preview-flipper{
     margin-top: 152px;
+}
+
+.connection-wrapper{
+    min-height: 210px;
+    background-color: #D5FB58;
+    display: flex;
+    justify-content: center;
+}
+
+.connection{
+    display:flex;
+    position: relative;
+    
+}
+
+.connection img{
+    position: absolute;
+    top: -91px;
+    left: -390px;
+}
+
+.connection div{
+    margin-left: 57px;
+    margin-bottom: 50px;
+}
+
+.connection h2{
+    font-size: 40px;
+    line-height: 49px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.connection p{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0;
+}
+
+.connection form{
+    display: block;
+    margin-left: 149px;
+    height: 100%;
+}
+
+.connection input{
+    width: 343px;
+    height: 63px;
+    margin-top: 74px;
+    background-color: #FFFFFF;
+    border-radius: 33px;
+    border: 2px solid #000000;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #969696;
+}
+
+.connection input::placeholder{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #969696;
+}
+
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91px;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: 13fr 1fr;
+    align-items: center;
+}
+
+.social-networks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.footer-logo{
+    position: relative;
+    left: 50px;
+    align-self: center;
+    justify-self: center;
 }
