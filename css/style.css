@@ -700,25 +700,31 @@ input[type='text']::placeholder{
 .connection-wrapper{
     min-height: 210px;
     background-color: #D5FB58;
+    display: flex;
+    justify-content: center;
 }
 
 .connection{
     display:flex;
+    position: relative;
+    
 }
 
 .connection img{
-    position: relative;
+    position: absolute;
     top: -91px;
+    left: -390px;
 }
 
 .connection div{
     margin-left: 57px;
+    margin-bottom: 50px;
 }
 
 .connection h2{
     font-size: 40px;
     line-height: 49px;
-    margin-top: 65px;
+    margin-top: 50px;
     margin-bottom: 15px;
 }
 
@@ -759,22 +765,27 @@ input[type='text']::placeholder{
 footer{
     background-color: black;
     display: flex;
+    justify-content: center;
     align-items: center;
     height: 91px;
 }
 
-footer div{
-    position: relative;
-    left: 50%;
-    display: flex;
+.footer-content{
+    display: grid;
+    grid-template-columns: 13fr 1fr;
     align-items: center;
 }
 
-footer .social-network{
-    margin-right: 13px;
+.social-networks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
 }
 
 .footer-logo{
-    margin-right: 414px;
+    position: relative;
+    left: 50px;
     align-self: center;
+    justify-self: center;
 }
